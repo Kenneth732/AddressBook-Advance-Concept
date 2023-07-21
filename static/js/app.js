@@ -82,4 +82,12 @@ class AddressBook {
     constructor() {
         this.contacts = [];
     }
+
+    addContact(firstName, lastName, phoneNumber, emailAddress, dateOfBirth) {
+        const contact = new PersonalContact(firstName, lastName, phoneNumber, emailAddress, dateOfBirth);
+        this.contacts.push(contact);
+    }
+
+
 }
+
