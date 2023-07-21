@@ -5,5 +5,33 @@ class Contact {
         this._phoneNumber = phoneNumber;
         this._emailAddress = emailAddress;
     }
+
+    get firstName() {
+        return this._firstName;
+    }
+    set firstName(value) {
+        this._firstName = value;
+    }
+
+    get lastName() {
+        return this._lastName;
+    }
+    set lastName(value) {
+        this._lastName = value;
+    }
+
+    get phoneNumber() {
+        return this._phoneNumber;
+    }
+    set phoneNumber(value) {
+        this._phoneNumber = value;
+    }
+
+    get emailAddress() {
+        return this._emailAddress;
+    }
+    set emailAddress(value) {
+        this._emailAddress = value;
+    }
 }
 
