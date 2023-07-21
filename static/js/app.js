@@ -88,6 +88,27 @@ class AddressBook {
         this.contacts.push(contact);
     }
 
+    deleteContact(index) {
+        this.contacts.splice(index, 1);
+    }
+
+    editContact(index) {
+        const contact = this.contacts[index];
+
+        const firstName = prompt('Enter new firstName:', contact.firstName);
+        const lastName = prompt('Enter new lastName:', contact.lastName);
+        const phoneNumber = prompt('Enter new phoneNumber:', contact.phoneNumber);
+        const emailAddress = prompt('Enter new emailAddress:', contact.emailAddress);
+        const dateOfBirth = prompt('Enter new dateOfBirth:', contact.dateOfBirth);
+
+        contact.firstName = firstName;
+        contact.lastName = lastName;
+        contact.phoneNumber = phoneNumber;
+        contact.emailAddress = emailAddress;
+        contact.dateOfBirth = dateOfBirth; // Added this line to update date of birth
+        this.displayContact();
+    }
+
 
 }
 
