@@ -65,4 +65,13 @@ class PersonalContact extends Contact {
         this._dateOfBirth = value;
     }
 
+    getAge() {
+        const today = new Date();
+        const dob = new Date(this._dateOfBirth);
+        const age = today.getFullYear() - dob.getFullYear();
+        const monthDiff = today.getMonth() - dob.getMonth();
+
+
+        return age;
+    }
 }
