@@ -57,4 +57,12 @@ class PersonalContact extends Contact {
         this._dateOfBirth = dateOfBirth;
     }
 
+    get dateOfBirth() {
+        return this._dateOfBirth;
+    }
+
+    set dateOfBirth(value) {
+        this._dateOfBirth = value;
+    }
+
 }
