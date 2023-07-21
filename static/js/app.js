@@ -143,3 +143,18 @@ class AddressBook {
 }
 
 const addressBook = new AddressBook();
+
+document.querySelector('#form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const firstName = document.querySelector('#first-name').value;
+    const lastName = document.querySelector('#last-name').value;
+    const phoneNumber = document.querySelector('#phone-number').value;
+    const emailAddress = document.querySelector('#email-address').value;
+    const dateOfBirth = document.querySelector('#date-of-birth').value;
+
+    addressBook.addContact(firstName, lastName, phoneNumber, emailAddress, dateOfBirth);
+    addressBook.displayContact();
+});
+
+addressBook.displayContact();
