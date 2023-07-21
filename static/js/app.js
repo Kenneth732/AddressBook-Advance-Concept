@@ -41,4 +41,12 @@ class ExtendedContact extends Contact {
         super(firstName, lastName, phoneNumber, emailAddress);
         this._additionalInfo = additionalInfo;
     }
+
+    get additionalInfo() {
+        return this._additionalInfo;
+    }
+
+    set additionalInfo(value) {
+        this._additionalInfo = value;
+    }
 }
