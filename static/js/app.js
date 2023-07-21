@@ -142,3 +142,4 @@ class AddressBook {
     }
 }
 
+const addressBook = new AddressBook();
