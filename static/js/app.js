@@ -109,6 +109,11 @@ class AddressBook {
         this.displayContact();
     }
 
+    displayContact() {
+        const contactContainer = document.querySelector('#contacts');
+        contactContainer.innerHTML = '';
 
+
+    }
 }
 
