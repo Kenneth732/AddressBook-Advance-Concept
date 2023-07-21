@@ -77,3 +77,9 @@ class PersonalContact extends Contact {
         return age;
     }
 }
+
+class AddressBook {
+    constructor() {
+        this.contacts = [];
+    }
+}
