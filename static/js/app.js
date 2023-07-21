@@ -50,3 +50,11 @@ class ExtendedContact extends Contact {
         this._additionalInfo = value;
     }
 }
+
+class PersonalContact extends Contact {
+    constructor(firstName, lastName, phoneNumber, emailAddress, dateOfBirth) {
+        super(firstName, lastName, phoneNumber, emailAddress);
+        this._dateOfBirth = dateOfBirth;
+    }
+
+}
