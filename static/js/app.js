@@ -113,7 +113,32 @@ class AddressBook {
         const contactContainer = document.querySelector('#contacts');
         contactContainer.innerHTML = '';
 
+        this.contacts.forEach((contact, index) => {
+            const contactElement = document.createElement('div');
+            contactElement.innerHTML = `<p>First Name: ${contact.firstName}</p>
+                                         <p>Last Name: ${contact.lastName}</p>
+                                         <p>Phone Number: ${contact.phoneNumber}</p>
+                                         <p>Email Address: ${contact.emailAddress}</p>
+                                         <p>Date of Birth: ${contact.dateOfBirth}</p>
+                                         <p>Age: ${contact.getAge()}</p>
+                                         <p>Additional Info: ${contact.additionalInfo || 'N/A'}</p>
+                                         <button class="edit-button">Edit</button>
+                                         <button class="delete-button">Delete</button>`;
+            contactContainer.appendChild(contactElement);
 
+            const editButton = contactElement.querySelector('.edit-button');
+            editButton.addEventListener('click', () => {
+                this.editContact(index);
+            });
+
+            const deleteButton = contactElement.querySelector('.delete-button');
+            deleteButton.addEventListener('click', () => {
+                if (confirm("Are you sure you want to delete this contact?")) {
+                    this.deleteContact(index);
+                    this.displayContact();
+                }
+            });
+        });
     }
 }
 
